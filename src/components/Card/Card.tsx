@@ -71,7 +71,7 @@ const Card = ({ data }: { data: ItunesDataType }) => {
             color: "#ffffff",
             padding: "4px 13px",
           }}>{data?.primaryGenreName || ''}</div>
-          {data?.trackPrice && (
+          {data?.trackPrice ? (
             <div style={{
               display: "flex",
               alignItems: "center",
@@ -87,7 +87,7 @@ const Card = ({ data }: { data: ItunesDataType }) => {
                 color: "#f5b014",
               }}>{data?.trackPrice}</span>
             </div>
-          )}
+          ) : (<></>)}
         </div>
       </div>
     </div>
